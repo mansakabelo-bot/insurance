@@ -1,94 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1278495620602293');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1278495620602293&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Continue</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Food Support Program</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f0f2f5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
-    .popup {
-      background: #fff;
-      width: 130%;
-      max-width: 340px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      padding: 20px;
+    body {
+      background: #f4f6f8;
+      color: #222;
+    }
+
+    .topbar {
+      background: #1f7a3d;
+      color: white;
       text-align: center;
+      padding: 12px;
+      font-size: 14px;
+      font-weight: bold;
     }
 
-    .title {
+    .hero {
+      background: white;
+      max-width: 900px;
+      margin: 30px auto;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .hero img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .content {
+      padding: 35px;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+      color: #444;
+    }
+
+    .highlight {
+      background: #edf8f0;
+      border-left: 5px solid #1f7a3d;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .states {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+      margin: 25px 0;
+    }
+
+    .state {
+      background: #f1f3f5;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: #1f7a3d;
+      color: white;
+      text-decoration: none;
+      padding: 16px 32px;
+      border-radius: 10px;
       font-size: 18px;
       font-weight: bold;
-      margin-bottom: 10px;
+      transition: 0.2s ease;
     }
 
-    .text {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 20px;
+    .cta a:hover {
+      background: #176430;
+      transform: translateY(-2px);
     }
 
-    .btn {
-      display: block;
-      width: 95%;
-      padding: 14px;
-      background: #1877f2;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: bold;
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+      padding: 25px;
     }
 
-    .btn:active {
-      background: #166fe5;
-    }
+    @media(max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
 
-    .small {
-      font-size: 11px;
-      color: #888;
-      margin-top: 10px;
+      .content {
+        padding: 24px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="popup">
-    <div class="text">
-      This is a transition page. Tap button below to continue 
-    </div>
+  <div class="topbar">
+    Nationwide Community Food Assistance Program
+  </div>
 
-    <a href="https://www.chesy.site/28LL52GX/9XWD88J/" class="btn">
-      Continue
-    </a>
+  <div class="hero">
+    <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=1400&auto=format&fit=crop" alt="Food assistance">
 
+    <div class="content">
+      <h1>Free Food Distribution Support Available Across the USA</h1>
+
+      <p>
+        Families and individuals in qualifying areas may be eligible to receive free food assistance through local community support initiatives.
+      </p>
+
+      <div class="highlight">
+        Applications are currently being reviewed in multiple states while available supplies last.
+      </div>
+
+      <p>
+        The program is designed to help households access grocery support, meal packages, and community food distribution resources.
+      </p>
+
+      <div class="cta">
+        <select onchange="if(this.value) window.location.href=this.value;" style="width:100%; max-width:500px; padding:16px; font-size:18px; border-radius:10px; border:2px solid #1f7a3d; background:#fff; color:#222; font-weight:bold; cursor:pointer;">
+          <option value="">Select Your State</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Alabama</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Alaska</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Arizona</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Arkansas</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">California</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Colorado</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Connecticut</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Delaware</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Florida</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Georgia</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Hawaii</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Idaho</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Illinois</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Indiana</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Iowa</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Kansas</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Kentucky</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Louisiana</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Maine</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Maryland</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Massachusetts</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Michigan</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Minnesota</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Mississippi</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Missouri</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Montana</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Nebraska</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Nevada</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">New Hampshire</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">New Jersey</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">New Mexico</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">New York</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">North Carolina</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">North Dakota</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Ohio</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Oklahoma</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Oregon</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Pennsylvania</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Rhode Island</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">South Carolina</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">South Dakota</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Tennessee</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Texas</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Utah</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Vermont</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Virginia</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Washington</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">West Virginia</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Wisconsin</option>
+          <option value="https://www.hiphi.site/28LL52GX/7P9TCGB/">Wyoming</option>
+        </select>
+      </div>
     </div>
+  </div>
+
+  <div class="footer">
+    © 2026 Community Support Initiative • This site is for informational purposes only.
   </div>
 
 </body>
