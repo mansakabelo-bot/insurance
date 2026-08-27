@@ -1,179 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1772581184156703');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1772581184156703&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Community Food Support Program</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eligibility Check</title>
+
   <style>
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
     }
 
     body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      font-family: Arial, Helvetica, sans-serif;
       background: #f4f6f8;
-      color: #222;
+      color: #1f2937;
     }
 
-    .topbar {
-      background: #1f7a3d;
-      color: white;
-      text-align: center;
-      padding: 12px;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    .hero {
-      background: white;
-      max-width: 900px;
-      margin: 30px auto;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    }
-
-    .hero img {
+    .container {
       width: 100%;
-      height: 280px;
-      object-fit: cover;
-    }
-
-    .content {
-      padding: 35px;
+      max-width: 500px;
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     }
 
     h1 {
-      font-size: 34px;
-      margin-bottom: 15px;
-      line-height: 1.2;
+      margin: 0 0 30px;
+      font-size: 28px;
+      line-height: 1.3;
+      font-weight: 700;
     }
 
-    p {
-      font-size: 17px;
-      line-height: 1.6;
-      margin-bottom: 18px;
-      color: #444;
+    .buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 25px;
     }
 
-    .highlight {
-      background: #edf8f0;
-      border-left: 5px solid #1f7a3d;
-      padding: 15px;
-      margin: 20px 0;
+    button {
+      flex: 1;
+      max-width: 180px;
+      padding: 15px 25px;
+      border: none;
       border-radius: 8px;
-      font-size: 16px;
-    }
-
-    .states {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 10px;
-      margin: 25px 0;
-    }
-
-    .state {
-      background: #f1f3f5;
-      padding: 12px;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    .cta {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .cta a {
-      display: inline-block;
-      background: #1f7a3d;
-      color: white;
-      text-decoration: none;
-      padding: 16px 32px;
-      border-radius: 10px;
       font-size: 18px;
-      font-weight: bold;
-      transition: 0.2s ease;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s, opacity 0.2s;
     }
 
-    .cta a:hover {
-      background: #176430;
+    button:hover {
       transform: translateY(-2px);
+      opacity: 0.9;
     }
 
-    .footer {
-      text-align: center;
+    .yes-btn {
+      background: #16a34a;
+      color: white;
+    }
+
+    .no-btn {
+      background: #dc2626;
+      color: white;
+    }
+
+    .notice {
+      margin: 0;
       font-size: 13px;
-      color: #666;
-      padding: 25px;
+      line-height: 1.6;
+      color: #6b7280;
     }
 
-    @media(max-width: 600px) {
-      h1 {
-        font-size: 28px;
+    @media (max-width: 480px) {
+      .container {
+        padding: 30px 20px;
       }
 
-      .content {
-        padding: 24px;
+      h1 {
+        font-size: 23px;
+      }
+
+      .buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      button {
+        width: 100%;
+        max-width: none;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <div class="topbar">
-    Nationwide Community Food Assistance Program
-  </div>
+  <div class="container">
 
-  <div class="hero">
-    <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=1400&auto=format&fit=crop" alt="Food assistance">
+    <h1>
+      This offer is only available to people who live in the USA.<br>
+      Do you live in the USA?
+    </h1>
 
-    <div class="content">
-      <h1>Free Food Distribution Support Available Across the USA</h1>
-
-      <p>
-        Families and individuals in qualifying areas may be eligible to receive free food assistance through local community support initiatives.
-      </p>
-
-      <div class="highlight">
-        Applications are currently being reviewed in multiple states while available supplies last.
-      </div>
-
-      <p>
-        The program is designed to help households access grocery support, meal packages, and community food distribution resources.
-      </p>
-
-      <div class="cta">
-        <a href="https://www.hiphi.site/2PMBTXHK/8P93LJQ/" style="display:inline-block; width:100%; max-width:500px; background:#1f7a3d; color:white; text-decoration:none; padding:18px 28px; border-radius:10px; font-size:20px; font-weight:bold; text-align:center;">
-          Get Assistance
-        </a>
-      </div>
+    <div class="buttons">
+      <button class="yes-btn" onclick="handleYes()">YES</button>
+      <button class="no-btn" onclick="handleNo()">NO</button>
     </div>
+
+    <p class="notice">
+      Even if you are not a citizen of the USA, you may qualify for this offer
+      if you live in the USA.
+    </p>
+
   </div>
 
-  <div class="footer">
-    © 2026 Community Support Initiative •
-  </div>
+  <script>
+    function handleYes() {
+      // Add your destination URL here
+      window.location.href = "YOUR-YES-URL-HERE";
+    }
+
+    function handleNo() {
+      // Add your destination URL here
+      window.location.href = "YOUR-NO-URL-HERE";
+    }
+  </script>
 
 </body>
 </html>
